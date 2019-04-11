@@ -1,0 +1,11 @@
+<button (click)="dec()">Remove tab</button>
+<button (click)="inc()">Add tab</button>
+
+<br>
+
+<div class="tabs">
+  <div class="tab" *ngFor="let tab of tabs" (click)="setActive(tab)">
+    <tab-title [ngClass]="{active: tab.active}" [tabTitle]="tab.title"></tab-title>
+    <tab-content *ngIf="tab.active" [tabContent]="tab.content"></tab-content>
+  </div>
+</div>

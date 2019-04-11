@@ -1,0 +1,24 @@
+.tabs {
+  margin-top: 10px;
+  display: table;
+  border: 1px solid grey;
+
+  .tab {
+    display: table-cell;
+    vertical-align: top;
+    padding: 5px 30px;
+    cursor: pointer;
+    min-height: 70px;
+    min-width: 125px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-sizing: border-box;
+
+    &:hover {
+      box-shadow: 0 0 5px lightgrey;
+    }
+    &:not(:last-child) {
+      border-right: 1px solid grey;
+    }
+  }
+}
